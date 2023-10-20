@@ -1,0 +1,178 @@
+
+<div>
+  <h1>parent component</h1>
+<!-- <h3>Reacied from Child COmponent: {{Cdata}}</h3> -->
+  <!-- <app-child (childevent)="getdata($event)"></app-child> -->
+  
+
+  <!-- <div *ngIf="isValid  ">This is Valid Data</div> -->
+  <!-- <div *ngIf="!isValid">This is not Valid Data</div> -->
+  
+  
+  <!-- <div *ngIf="isValid ; else elseblock">THis is valid data</div>
+  <ng-template #elseblock>
+
+    <div >This is not Valid Data</div>
+  </ng-template> -->
+
+  <!-- <div *ngIf="isValid ; then thenblock ; else elseblock "></div>
+  <ng-template #thenblock>
+<div>this is valid data</div>
+</ng-template>
+
+<ng-template #elseblock>
+
+  <div>this not is valid</div>
+</ng-template> -->
+
+<!-- enter your name: <input type="text" #txtname (keyup)="0"/> -->
+
+<!-- <div [ngSwitch]="name">
+  <div *ngSwitchCase="'Ram'">Hello Ram</div>
+  <div *ngSwitchCase="'shyam'">Hello shyam</div>
+  <div *ngSwitchCase="'manthan'">Hello manthan</div>
+  <div *ngSwitchCase="'parth'">Hello parth</div>
+  <div *ngSwitchCase="'arjun'">Hello arjun</div>
+  <div *ngSwitchCase="'masum'">Hello masum</div>
+  <div *ngSwitchCase="'ajay'">Hello ajay</div>
+  <div *ngSwitchDefault>No Data Found</div>
+</div> -->
+
+
+<!-- <h2>for loop</h2>
+<ul>
+  <li *ngFor="let i of Child;let in=index;let f=first;let l=last;let e=even;let o=odd">
+    {{in+1}} - {{i.name}}    - {{i.age}} - {{f}} - {{l}} - {{o}} - {{e}}
+  </li>
+</ul> -->
+
+<!-- <table border="1"> -->
+  <!-- <tr *ngFor="let s of student;let i=index,TrackBy:trackbystudent">
+    <td>{{i}} </td> -
+    <td>{{s.studentId}}</td>
+    <td>{{s.name}}</td>
+    <td>{{s.age}}</td>
+    <td>{{s.gender}}</td>
+    <td>{{s.course}}</td>
+  </tr>
+</table>
+<br>
+<button (click)="getmorestudents()">Get student</button>
+
+   -->
+<!-- 
+<h1>grouping example</h1>
+<ul *ngFor="let group of Countrydetails">
+  <li>
+    {{group.country}}--
+  </li >
+ <ul>
+  <li *ngFor="let person of group.people">
+    {{person.name}}---({{person.age}})
+  </li>
+ </ul>
+</ul> -->
+
+<!-- 
+<h1>style ngStyle</h1>
+<ul *ngFor="let person of people">
+  <li [ngStyle]="{'color':getcolor(person.country)}">
+    {{person.name}}---{{person.country}}
+  </li>
+</ul> -->
+
+<!-- hello {{title}}
+<h1>hello Mr. {{arjunsinh}}</h1>
+
+{{code*code1}}
+
+<br>
+<h2 [innerHTML]="arjunsinh"></h2>
+<h4 [innerHTML]="title"></h4> -->
+
+
+<!-- Enter your name: <input [value]='data' (input)='data=$event.target.value' />
+your name is: {{data}} -->
+
+<!-- <input type="text" [(ngModel)]="data1">
+{{data1}} -->
+
+<!-- <table border="2">
+ <thead>
+  <tr>
+    <th>Emp code</th>
+    <th>name</th>
+    <th>salary</th>
+    <th> dob</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr *ngFor="let item of employee">
+    <td>{{item.code}}</td>
+    <td>{{item.name |uppercase}}</td>
+    <td>{{item.salary }}</td>
+    <td>{{item.dob}}</td>
+
+  </tr>
+ </tbody>
+</table> -->
+<!-- 
+today date is : {{dob}} <br>
+mrdium : {{dob|date:'medium'}} <br>
+other : {{dob | date:'dd/MM/yyyy'}} <br>
+time : {{dob| date:'mediumTime'}} <br><br>
+
+salary in DOlar: {{salary|currency:'USD':true}} <br>
+
+ -->
+
+<!-- {{dob}}  <br>
+{{dob|date:'mediumDate'}} <br>
+{{dob|date:'shortDate'}} <br>
+{{dob|date:'longDate'}} <br>
+{{dob|date:'fullDate'}} <br>
+
+<hr>
+
+{{pdata}} <br>
+{{pdata|percent}} <br>
+{{pdata|percent:'2.4-5'}} <br>
+{{pdata|percent}} <br>
+
+<hr>
+
+{{pdata|currency:'USD':true}} <br>
+{{pdata|currency:'INR'}} -->
+
+<!-- <h2>json example</h2>
+
+<div>
+  {{employee|slice :1:3|json}}
+</div> -->
+
+<h2>custom pipes</h2>
+
+<table>
+  <tr *ngFor="let item of employee">
+    <td>{{item.id}}</td>
+    <td>{{item.name|mypipe:item.gender}}</td>
+    <td>{{item.gender}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.country}}</td>
+
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <app-child></app-child>
+</div>
