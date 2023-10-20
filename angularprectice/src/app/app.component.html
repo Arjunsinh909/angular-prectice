@@ -150,7 +150,7 @@ salary in DOlar: {{salary|currency:'USD':true}} <br>
   {{employee|slice :1:3|json}}
 </div> -->
 
-<h2>custom pipes</h2>
+<!-- <h2>custom pipes</h2>
 
 <table>
   <tr *ngFor="let item of employee">
@@ -161,7 +161,9 @@ salary in DOlar: {{salary|currency:'USD':true}} <br>
     <td>{{item.country}}</td>
 
   </tr>
-</table>
+</table> -->
+
+
 
 
 
@@ -174,5 +176,28 @@ salary in DOlar: {{salary|currency:'USD':true}} <br>
 
 
   
-  <app-child></app-child>
-</div>
+
+<!-- </div>
+
+<h3>Router link Example</h3>
+
+<a [routerLink]="['/child']">Child</a><br>
+<a [routerLink]="['/other']">other</a><br>
+<a [routerLink]="['/hello']">error</a><br>
+<button (click)="student()">Router</button>
+<div>
+  <router-outlet></router-outlet>
+</div> -->
+
+
+<h2>{{msg}}</h2>
+
+<button (click)="getmessage()">Get Message</button>
+
+
+
+
+
+
+
+<app-child></app-child>

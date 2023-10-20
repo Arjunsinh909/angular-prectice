@@ -1,9 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
+import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers:[MessageService]
   // encapsulation:ViewEncapsulation.None
 })
 export class AppComponent {
@@ -126,21 +129,30 @@ export class AppComponent {
 // pdata:number=0.1234567890
 
 
-public employee:any[]=[
-  {id:101,name:'mohan',gender:'Male', age:20,country:'india'},
-  {id:102,name:'sham',gender:'female',age:22,country:'usa'},
-  {id:103,name:'arjun',gender:'male',age:23,country:'uk'},
-  {id:104,name:'mayur',gender:'female',age:24,country:'london'},
-  {id:105,name:'parht',gender:'male',age:25,country:'aus'},
-  {id:106,name:'masum',gender:'female ',age:26,country:'west'},
-]
+// public employee:any[]=[
+//   {id:101,name:'mohan',gender:'Male', age:20,country:'india'},
+//   {id:102,name:'sham',gender:'female',age:22,country:'usa'},
+//   {id:103,name:'arjun',gender:'male',age:23,country:'uk'},
+//   {id:104,name:'mayur',gender:'female',age:24,country:'london'},
+//   {id:105,name:'parht',gender:'male',age:25,country:'aus'},
+//   {id:106,name:'masum',gender:'female ',age:26,country:'west'},
+// ]
 
+// constructor(private router:Router){}
+// student(){
+//   this.router.navigate(['/other'])
+// }
 
+msg:string='';
+constructor(private _messageService:MessageService){
 
+}
+ngOnInit(){
+}
+getmessage(){
+  this.msg=this._messageService.getmessage()
 
-
-
-
+}
 
 
 }

@@ -8,6 +8,7 @@ import { ChildComponent } from './child/child.component';
 import { OtherComponent } from './other/other.component';
 import { FormsModule } from '@angular/forms';
 import { MypipePipe } from './mypipe.pipe';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MypipePipe } from './mypipe.pipe';
    ChildComponent,
    OtherComponent,
    MypipePipe,
+   Page404Component,
   ],
   imports: [
     BrowserModule,
